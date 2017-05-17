@@ -10,14 +10,11 @@
     <script src="js/bootstrap.js"></script>
     <script src="js/Chart.bundle.js"></script>
     <script src="js/custom.js"></script>
-    <script src="script.js"></script>
-
-
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
 </head>
 <body>
-    <form class="form-horizontal" action="wyniki.php" method="post">
+    <form class="form-horizontal" action="wyniki1.php" method="post">
         <fieldset>
 
             <!-- Form Name -->
@@ -138,8 +135,7 @@
             <div class="form-group">
                 <label class="col-md-4 control-label" for="height">Wzrost [cm]:</label>
                 <div class="col-md-1">
-                    <input id="form_height" name="height" type="text"  placeholder="" class="form-control input-md">
-                    <td><span class="error_form" id="error_height_message">TEST</span></td>
+                    <input id="textinput" name="height" type="text" placeholder="" class="form-control input-md">
 
                 </div>
             </div>
@@ -191,61 +187,113 @@
                     </div>
                 </div>
             </div>
-           <!-- Form Name -->
-
-            <!-- Multiple Radios -->
+            <!-- Multiple Checkboxes -->
             <div class="form-group">
-              <label class="col-md-4 control-label" for="causes">Do najczęstszych przyczyn udaru mózgu należą:</label>
-              <div class="col-md-4">
-              <div class="radio">
-                <label for="causes_0">
-                  <input type="radio" name="causes" id="causes_0" value="0">
-                  anemia i hemofilia
-                </label>
-	            </div>
-              <div class="radio">
-                <label for="causes_1">
-                  <input type="radio" name="causes" id="causes_1" value="1">
-                  nowotwór i migrena
-                </label>
-	            </div>
-              <div class="radio">
-                <label for="causes_2">
-                  <input type="radio" name="causes" id="causes_2" value="2">
-                  nadciśnienie tętnicze i migotanie przedsionków
-                </label>
-	            </div>
-              <div class="radio">
-                <label for="causes_3">
-                  <input type="radio" name="causes" id="causes_3" value="3">
-                  przebywanie na słońcu bez czapki
-                </label>
-	            </div>
-              </div>
+                <label class="col-md-4 control-label" for="causes"> Najczęstsze przyczyny udaru mózgu to:</label>
+                <div class="col-md-4">
+                    <div class="checkbox">
+                        <label for="causes_0">
+                            <input type="checkbox" name="causes[]" id="causes_0" value="0">
+                            nadciśnienie tętnicze
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label for="causes_1">
+                            <input type="checkbox" name="causes[]" id="causes_1" value="1">
+                            nadwaga
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label for="causes_2">
+                            <input type="checkbox" name="causes[]" id="causes_2" value="2">
+                            nowotwór
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label for="causes_3">
+                            <input type="checkbox" name="causes[]" id="causes_3" value="3">
+                            migotanie przedsionków
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label for="causes_4">
+                            <input type="checkbox" name="causes[]" id="causes_4" value="4">
+                            anemia
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label for="causes_5">
+                            <input type="checkbox" name="causes[]" id="causes_5" value="5">
+                            migrena
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label for="causes_6">
+                            <input type="checkbox" name="causes[]" id="causes_6" value="6">
+                            palenie papierosów
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label for="causes_7">
+                            <input type="checkbox" name="causes[]" id="causes_7" value="7">
+                            cukrzyca
+                        </label>
+                    </div>
+                </div>
             </div>
-           <!-- Multiple Radios -->
+            <!-- Multiple Checkboxes -->
             <div class="form-group">
-              <label class="col-md-4 control-label" for="symptoms">Do najczęstszy objawów udaru mózgu należą:</label>
-              <div class="col-md-4">
-              <div class="radio">
-                <label for="symptoms_0">
-                  <input type="radio" name="symptoms" id="symptoms_0" value="0">
-                  paraliż kończyn, zaburzenia widzenia i trudności z mową
-                </label>
-	            </div>
-              <div class="radio">
-                <label for="symptoms_1">
-                  <input type="radio" name="symptoms" id="symptoms_1" value="1">
-                  ból całego ciała, wymioty i biegunka
-                </label>
-	            </div>
-              <div class="radio">
-                <label for="symptoms_2">
-                  <input type="radio" name="symptoms" id="symptoms_2" value="2">
-                  senność, gorączka i dreszcze
-                </label>
-	            </div>
-              </div>
+                <label class="col-md-4 control-label" for="symptoms">Najczęstsze objawy udaru mózgu to:</label>
+                <div class="col-md-4">
+                    <div class="checkbox">
+                        <label for="symptoms_0">
+                            <input type="checkbox" name="symptoms[]" id="symptoms_0" value="0">
+                            ból całego ciała
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label for="symptoms_1">
+                            <input type="checkbox" name="symptoms[]" id="symptoms_1" value="1">
+                            zaburzenia widzenia
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label for="symptoms_2">
+                            <input type="checkbox" name="symptoms[]" id="symptoms_2" value="2">
+                            trudności z mówieniem
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label for="symptoms_3">
+                            <input type="checkbox" name="symptoms[]" id="symptoms_3" value="3">
+                            wymioty
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label for="symptoms_4">
+                            <input type="checkbox" name="symptoms[]" id="symptoms_4" value="4">
+                            paraliż ręki lub nogi
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label for="symptoms_5">
+                            <input type="checkbox" name="symptoms[]" id="symptoms_5" value="5">
+                            zaburzenia trawienia
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label for="symptoms_6">
+                            <input type="checkbox" name="symptoms[]" id="symptoms_6" value="6">
+                            senność
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label for="symptoms_7">
+                            <input type="checkbox" name="symptoms[]" id="symptoms_7" value="7">
+                            asymetria twarzy
+                        </label>
+                    </div>
+                </div>
             </div>
             <!-- Multiple Radios -->
             <div class="form-group">
@@ -294,40 +342,50 @@
                         80 - 95
                     </label>
                </div>
-                </div>
            
           
-           <!-- Multiple Radios -->
-            <div class="form-group">
-              <label class="col-md-4 control-label" for="prevention">Aby zapobiegać udarowi mózgu należy:</label>
-              <div class="col-md-4">
-              <div class="radio">
-                <label for="prevention_0">
-                  <input type="radio" name="prevention" id="prevention_0" value="0">
-                  jeść dużo słonych i tłustych potraw
-                </label>
-	            </div>
-              <div class="radio">
-                <label for="prevention_1">
-                  <input type="radio" name="prevention" id="prevention_1" value="1">
-                  jeść zdrowo, ruszać się i badać (ciśnienie i cholesterol)
-                </label>
-	            </div>
-              <div class="radio">
-                <label for="prevention_2">
-                  <input type="radio" name="prevention" id="prevention_2" value="2">
-                  regularnie badać krew i pić zieloną herbatę
-                </label>
-	            </div>
-              <div class="radio">
-                <label for="prevention_3">
-                  <input type="radio" name="prevention" id="prevention_3" value="3">
-                  nosić czapkę na słońcu
-                </label>
-	            </div>
-              </div>
+           </div><!-- Multiple Checkboxes -->
+           <div class="form-group">
+               <label class="col-md-4 control-label" for="prevention">Aby zapobiegać zachorowaniu na udar mózgu należy: </label>
+               <div class="col-md-4">
+                   <div class="checkbox">
+                       <label for="prevention_0">
+                           <input type="checkbox" name="prevention[]" id="prevention_0" value="0">
+                           regularnie mierzyć ciśnienie
+                       </label>
+                   </div>
+                    <div class="checkbox">
+                        <label for="prevention_1">
+                            <input type="checkbox" name="prevention[]" id="prevention_1" value="1">
+                            regularnie pić alkohol
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label for="prevention_2">
+                            <input type="checkbox" name="prevention[]" id="prevention_2" value="2">
+                            używać dużo soli w potrawach
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label for="prevention_3">
+                            <input type="checkbox" name="prevention[]" id="prevention_3" value="3">
+                            podejmować aktywność fizyczną
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label for="prevention_4">
+                            <input type="checkbox" name="prevention[]" id="prevention_4" value="4">
+                            badać poziom cholesterolu
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label for="prevention_5">
+                            <input type="checkbox" name="prevention[]" id="prevention_5" value="5">
+                            palić papierosy
+                        </label>
+                    </div>
+                </div>
             </div>
-
             <!-- Multiple Radios -->
             <div class="form-group">
                 <label class="col-md-4 control-label" for="recognition">Co zrobić, gdy u kogoś rozpoznamy udar mózgu?</label>
@@ -411,8 +469,7 @@
                     </label>
                 </div>
             </div>
-
-            
+    
             <!-- Button -->
             <div class="form-group">
                 <label class="col-md-4 control-label" for="singlebutton"></label>
